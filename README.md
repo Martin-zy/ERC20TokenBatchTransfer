@@ -2,7 +2,11 @@
 ## install
 
 ```shell
-$ npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git
+$ mkdir my_project
+$ cd my_project
+$ npm init -y
+$ npm install web3@0.18.4 --save
+$ npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git --save
 ```
 
 ## example
