@@ -1,13 +1,13 @@
 
 ## install
 
-```
-npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git
+```shell
+$ npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git
 ```
 
 ## example
 
-```js
+```javascript
 var transfer = require('../index.js')
 
 transfer.init({

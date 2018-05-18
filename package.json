@@ -1,5 +1,5 @@
 {
-  "name": "ERC20TokenBatchTransfer",
+  "name": "erc20TokenBatchTransfer",
   "version": "1.0.0",
   "description": "``` npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git ```",
   "main": "index.js",
