@@ -21,7 +21,7 @@ transfer.init({
     provider: "https://ropsten.infura.io"
 });
 
-// formate:[{to:"receiver's address",amount:"amount to send"}]
+// format:[{to:"receiver's address",amount:"amount to send"}]
 transfer.batchTransfer([
     {to: "0xf7171d1ea98f698e22ef0ebfb5498d0c2ca83890", amount: 10},
     {to: "0xf7171d1ea98f698e22ef0ebfb5498d0c2ca83890", amount: 10},
