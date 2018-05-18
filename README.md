@@ -14,6 +14,7 @@ $ npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git --save
 ```javascript
 var transfer = require('erc20TokenBatchTransfer');
 
+// first ,set some parameters
 transfer.init({
     senderAddress: "senderAddress",
     privateKey: "your senderAddress privateKey",
