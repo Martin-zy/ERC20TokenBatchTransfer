@@ -1,8 +1,11 @@
 
+## install
+
 ```
-npm install git://github.com/npm/npm.git#v1.0.27
+npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git
 ```
 
+## example
 
 ```js
 var transfer = require('../index.js')
