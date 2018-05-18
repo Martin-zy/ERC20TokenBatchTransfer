@@ -16,9 +16,9 @@ var transfer = require('erc20TokenBatchTransfer');
 
 // first ,set some parameters
 transfer.init({
-    senderAddress: "senderAddress",
-    privateKey: "your senderAddress privateKey",
-    contractAddress: "your erc20 contranct",
+    senderAddress: "sender's Address",
+    privateKey: "sender's privateKey",
+    contractAddress: "your erc20 contract address",
     provider: "https://ropsten.infura.io"
 });
 
