@@ -7,6 +7,9 @@ var Tx = require('ethereumjs-tx');
 
 var _ = require('underscore');
 
+var sleep=require('./lib/sleep');
+var watch=require('./lib/watchHash')
+
 var senderAddress;
 var privateKey;
 
@@ -66,7 +69,11 @@ async function sendTx(toAddress, amount) {
             }
         });
     });
+
+    watch(web3,hash);
+
     nonce = nonce + 1;
+    // sleep(1000*17);
 
     return hash;
 
