@@ -1,8 +1,12 @@
 {
-  "name": "ttt",
+  "name": "ERC20TokenBatchTransfer",
   "version": "1.0.0",
-  "description": "",
-  "main": "truffle.js",
+  "description": "``` npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git ```",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
   "devDependencies": {
     "async": "^2.4.0",
     "bignumber.js": "^4.0.2",
@@ -18,7 +22,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionchain/ERC20TokenBatchTransfer.git"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ionchain/ERC20TokenBatchTransfer/issues"
+  },
+  "homepage": "https://github.com/ionchain/ERC20TokenBatchTransfer#readme"
 }
