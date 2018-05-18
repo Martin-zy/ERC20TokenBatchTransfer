@@ -12,7 +12,7 @@ $ npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git --save
 ## example
 
 ```javascript
-var transfer = require('../index.js')
+var transfer = require('erc20TokenBatchTransfer')
 
 transfer.init({
     senderAddress: "senderAddress",
