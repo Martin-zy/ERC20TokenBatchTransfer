@@ -30,7 +30,5 @@ transfer.batchTransfer([
     {to: "0xf7171d1ea98f698e22ef0ebfb5498d0c2ca83890", amount: 10},
     {to: "0xf7171d1ea98f698e22ef0ebfb5498d0c2ca83890", amount: 10},
     {to: "0xf7171d1ea98f698e22ef0ebfb5498d0c2ca83890", amount: 10}
-]).then(function (result) { // return all transaction hash
-    console.info(result)
-});
+]);
 ```
