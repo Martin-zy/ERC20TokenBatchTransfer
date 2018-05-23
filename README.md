@@ -15,8 +15,13 @@ $ npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git --save
 var transfer = require('erc20TokenBatchTransfer');
 var txEvent=require('erc20TokenBatchTransfer/lib/taskqueue').txEvent;
 
-txEvent.on('tx_success',function(obj) {
-  
+txEvent.on('tx_success',function (tx) {
+    console.info(`success: ${JSON.stringify(tx)}`);
+});
+
+
+txEvent.on('tx_fail',function (tx) {
+    console.info(`fail: ${JSON.stringify(tx)}`);
 });
 
 // first ,set some parameters
