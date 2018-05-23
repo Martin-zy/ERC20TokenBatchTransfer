@@ -9,7 +9,6 @@ async function batchTransfer(sendList) {
     for (let i = 0; i < sendList.length; i++) {
         let send = sendList[i];
         let addr = send["to"];
-        console.info(`addr is ${addr}`)
         let amount = send["amount"];
         q.txQ.push({to: addr, amount: amount});
     }
