@@ -1,5 +1,6 @@
 var q = require('./lib/taskqueue');
 var txSender = require('./lib/txSender');
+var sleep=require('./lib/sleep');
 
 function init(info) {
     txSender.init(info);
@@ -11,6 +12,9 @@ async function batchTransfer(sendList) {
         let addr = send["to"];
         let amount = send["amount"];
         q.txQ.push({to: addr, amount: amount});
+        if(i % 5 ==0 ){
+            await sleep(20 * 1000);
+        }
     }
     // q.on('drain', function (){})
 }
