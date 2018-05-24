@@ -42,3 +42,14 @@ transfer.batchTransfer([
     {to: "0xf7171d1ea98f698e22ef0ebfb5498d0c2ca83890", amount: 10}
 ]);
 ```
+
+FAQ:
+
+Question 1:
+```
+err:Error: insufficient funds for gas * price + value,gas:0x18939,gasprice:0x2d1375900.0000218def416bdb1a6d
+
+```
+Answer 1:
+when system detected a sent tx time out ,system will try resend the tx with same nonce
+(actually the tx has been added to the block),so you get the error .
