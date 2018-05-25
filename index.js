@@ -1,6 +1,6 @@
 var q = require('./lib/taskqueue');
 var txSender = require('./lib/txSender');
-var txEvent = require('./lib/taskqueue').txEvent;
+var txEvent = require('./lib/txEvents');
 var sleep = require('./lib/sleep');
 
 function init(info) {
@@ -10,12 +10,16 @@ function init(info) {
 var recivedTxCount = 0;
 var sentTxCount = 0;
 
-txEvent.on('tx_success', function (tx) {
+txEvent.subscribe('tx_success', function (tx) {
     recivedTxCount = recivedTxCount + 1;
 });
 
 
-txEvent.on('tx_fail', function (tx) {
+txEvent.subscribe('tx_fail', function (tx) {
+    recivedTxCount = recivedTxCount + 1;
+});
+
+txEvent.subscribe('tx_send_err', function (tx) {
     recivedTxCount = recivedTxCount + 1;
 });
 
