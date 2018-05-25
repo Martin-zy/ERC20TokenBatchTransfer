@@ -13,15 +13,24 @@ $ npm install git://github.com/ionchain/ERC20TokenBatchTransfer.git --save
 
 ```javascript
 var transfer = require('erc20TokenBatchTransfer');
-var txEvent=require('erc20TokenBatchTransfer/lib/taskqueue').txEvent;
+var txEvent=require('erc20TokenBatchTransfer/lib/txEvents');
 
-txEvent.on('tx_success',function (tx) {
-    console.info(`success: ${JSON.stringify(tx)}`);
+
+txEvent.subscribe('tx_success', function (tx) {
+    logger.debug(`success: ${JSON.stringify(tx)}`);
 });
 
 
-txEvent.on('tx_fail',function (tx) {
-    console.info(`fail: ${JSON.stringify(tx)}`);
+txEvent.subscribe('tx_fail', function (tx) {
+    logger.debug(`fail: ${JSON.stringify(tx)}`);
+});
+
+txEvent.subscribe('invalidAddress',function (addr) {
+    logger.debug(`invalid addr: ${JSON.stringify(addr)}`);
+});
+
+txEvent.subscribe('tx_send_err',function (addr) {
+    logger.debug(`tx_send_errdr: ${JSON.stringify(addr)}`);
 });
 
 // first ,set some parameters
